@@ -19,9 +19,14 @@
     <%= f.label :forename %><br>
     <%= f.text_field :forename %>
   </div>
+	
   <div class="field">
     <%= f.label :position_in_household %><br>
     <%= f.text_field :position_in_household %>
+  </div>
+  <div class="field">
+    <%= f.label :relationship_status %><br>
+    <%= collection_select(:census_record, :relationship_status_id, RelationshipStatus.all, :id, :description) %>
   </div>
 
   <div class="field">

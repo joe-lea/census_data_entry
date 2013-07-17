@@ -12,6 +12,7 @@
       <th>Occupation</th>
       <th>Industry</th>
       <th>Place of birth</th>
+      <th>Relationship Status</th>
       <th></th>
       <th></th>
       <th></th>
@@ -30,6 +31,7 @@
         <td><%= census_record.occupation %></td>
         <td><%= census_record.industry %></td>
         <td><%= census_record.place_of_birth %></td>
+        <td><%= census_record.relationship_status.description %></td>
         <td><%= link_to 'Show', census_record %></td>
         <td><%= link_to 'Edit', edit_census_record_path(census_record) %></td>
         <td><%= link_to 'Destroy', census_record, method: :delete, data: { confirm: 'Are you sure?' } %></td>

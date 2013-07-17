@@ -69,6 +69,6 @@ class CensusRecordsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def census_record_params
-      params.require(:census_record).permit(:parish, :street, :house_number, :surname, :forename, :age, :occupation, :industry, :place_of_birth)
+      params.require(:census_record).permit(:parish_id, :street, :house_number, :surname, :forename, :age, :occupation, :industry, :place_of_birth, :relationship_status_id, :position_in_household)
     end
 end
