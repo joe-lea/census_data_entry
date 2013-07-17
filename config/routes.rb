@@ -1,7 +1,7 @@
 CensusData::Application.routes.draw do
-  resources :relationship_statuses
+  resources :people
 
-  resources :census_records
+  resources :relationship_statuses
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130717194903) do
+ActiveRecord::Schema.define(version: 20130717214502) do
 
   create_table "census_records", force: true do |t|
     t.integer  "parish_id"
@@ -20,6 +20,21 @@ ActiveRecord::Schema.define(version: 20130717194903) do
     t.string   "surname"
     t.string   "forename"
     t.integer  "age"
+    t.string   "occupation"
+    t.string   "industry"
+    t.string   "place_of_birth"
+    t.string   "position_in_household"
+    t.integer  "relationship_status_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "people", force: true do |t|
+    t.string   "surname"
+    t.string   "forename"
+    t.integer  "age"
+    t.string   "house_number"
+    t.string   "street"
     t.string   "occupation"
     t.string   "industry"
     t.string   "place_of_birth"

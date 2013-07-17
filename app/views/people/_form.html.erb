@@ -1,10 +1,10 @@
-<%= form_for(@census_record) do |f| %>
-  <% if @census_record.errors.any? %>
+<%= form_for(@person) do |f| %>
+  <% if @person.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@census_record.errors.count, "error") %> prohibited this census_record from being saved:</h2>
+      <h2><%= pluralize(@person.errors.count, "error") %> prohibited this person from being saved:</h2>
 
       <ul>
-      <% @census_record.errors.full_messages.each do |msg| %>
+      <% @person.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
@@ -19,16 +19,10 @@
     <%= f.label :forename %><br>
     <%= f.text_field :forename %>
   </div>
-	
   <div class="field">
-    <%= f.label :position_in_household %><br>
-    <%= f.text_field :position_in_household %>
+    <%= f.label :age %><br>
+    <%= f.text_field :age %>
   </div>
-  <div class="field">
-    <%= f.label :relationship_status %><br>
-    <%= collection_select(:census_record, :relationship_status_id, RelationshipStatus.all, :id, :description) %>
-  </div>
-
   <div class="field">
     <%= f.label :house_number %><br>
     <%= f.text_field :house_number %>
@@ -37,27 +31,26 @@
     <%= f.label :street %><br>
     <%= f.text_field :street %>
   </div>
-
-  <div class="field">
-    <%= f.label :age %><br>
-    <%= f.text_field :age %>
-  </div>
-
   <div class="field">
     <%= f.label :occupation %><br>
     <%= f.text_field :occupation %>
   </div>
-
   <div class="field">
     <%= f.label :industry %><br>
     <%= f.text_field :industry %>
   </div>
-
   <div class="field">
     <%= f.label :place_of_birth %><br>
     <%= f.text_field :place_of_birth %>
   </div>
-
+  <div class="field">
+    <%= f.label :position_in_household %><br>
+    <%= f.text_field :position_in_household %>
+  </div>
+  <div class="field">
+    <%= f.label :relationship_status %><br>
+    <%= collection_select(:person, :relationship_status_id, RelationshipStatus.all, :id, :description) %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
