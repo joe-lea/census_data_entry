@@ -1,0 +1,43 @@
+<h1>Listing census_records</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parish</th>
+      <th>Street</th>
+      <th>House number</th>
+      <th>Surname</th>
+      <th>Forename</th>
+      <th>Age</th>
+      <th>Occupation</th>
+      <th>Industry</th>
+      <th>Place of birth</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @census_records.each do |census_record| %>
+      <tr>
+        <td><%= census_record.parish %></td>
+        <td><%= census_record.street %></td>
+        <td><%= census_record.house_number %></td>
+        <td><%= census_record.surname %></td>
+        <td><%= census_record.forename %></td>
+        <td><%= census_record.age %></td>
+        <td><%= census_record.occupation %></td>
+        <td><%= census_record.industry %></td>
+        <td><%= census_record.place_of_birth %></td>
+        <td><%= link_to 'Show', census_record %></td>
+        <td><%= link_to 'Edit', edit_census_record_path(census_record) %></td>
+        <td><%= link_to 'Destroy', census_record, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Census record', new_census_record_path %>

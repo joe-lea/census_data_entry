@@ -1,0 +1,27 @@
+<h1>Listing relationship_statuses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @relationship_statuses.each do |relationship_status| %>
+      <tr>
+        <td><%= relationship_status.description %></td>
+        <td><%= link_to 'Show', relationship_status %></td>
+        <td><%= link_to 'Edit', edit_relationship_status_path(relationship_status) %></td>
+        <td><%= link_to 'Destroy', relationship_status, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Relationship status', new_relationship_status_path %>

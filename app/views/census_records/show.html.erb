@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Parish:</strong>
+  <%= @census_record.parish %>
+</p>
+
+<p>
+  <strong>Street:</strong>
+  <%= @census_record.street %>
+</p>
+
+<p>
+  <strong>House number:</strong>
+  <%= @census_record.house_number %>
+</p>
+
+<p>
+  <strong>Surname:</strong>
+  <%= @census_record.surname %>
+</p>
+
+<p>
+  <strong>Forename:</strong>
+  <%= @census_record.forename %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @census_record.age %>
+</p>
+
+<p>
+  <strong>Occupation:</strong>
+  <%= @census_record.occupation %>
+</p>
+
+<p>
+  <strong>Industry:</strong>
+  <%= @census_record.industry %>
+</p>
+
+<p>
+  <strong>Place of birth:</strong>
+  <%= @census_record.place_of_birth %>
+</p>
+
+<%= link_to 'Edit', edit_census_record_path(@census_record) %> |
+<%= link_to 'Back', census_records_path %>
