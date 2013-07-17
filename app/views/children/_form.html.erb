@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :age %><br>
-    <%= f.number_field :age %>
+    <%= f.text_field :age %>
   </div>
   <div class="field">
     <%= f.label :gender %><br>
@@ -36,8 +36,8 @@
     <%= f.check_box :in_work %>
   </div>
   <div class="field">
-    <%= f.label :parent_id %><br>
-    <%= f.number_field :parent_id %>
+    <%= f.label :parent %><br>
+    <%= f.select(:parent_id, Person.all.map { |p| [ "#{p.surname}, #{p.forename}", p.id ] }) %>
   </div>
   <div class="actions">
     <%= f.submit %>
