@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  surname: MyString
+  forename: MyString
+  age: 1
+  gender: MyString
+  in_school: false
+  in_work: false
+  parent_id: 1
+
+two:
+  surname: MyString
+  forename: MyString
+  age: 1
+  gender: MyString
+  in_school: false
+  in_work: false
+  parent_id: 1

@@ -1,4 +1,6 @@
 CensusData::Application.routes.draw do
+  resources :children
+
   resources :people
 
   resources :relationship_statuses
