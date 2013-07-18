@@ -7,9 +7,10 @@
 $(document).ready( ->
   is_wife = ->
     position_in_household = position_in_household_box.val()
-    position_in_household == 'wife'
+    position_in_household == 'wife'  || position_in_household == 'Wife'
 
   update_relationship_status = ->
+    console.log "changing dropdown value from #{$('#relationship_status').find('select').val()}"
     $('#relationship_status').find('select')
                              .val('2')
 
