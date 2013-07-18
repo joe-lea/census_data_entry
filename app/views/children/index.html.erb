@@ -9,6 +9,7 @@
       <th>Gender</th>
       <th>In school</th>
       <th>In work</th>
+      <th>Occupation</th>
       <th>Parent</th>
       <th></th>
       <th></th>
@@ -25,6 +26,7 @@
         <td><%= child.gender %></td>
         <td><%= child.in_school %></td>
         <td><%= child.in_work %></td>
+        <td><%= child.occupation %></td>
         <td><%= "#{child.parent.surname}, #{child.parent.forename}" %></td>
         <td><%= link_to 'Show', child %></td>
         <td><%= link_to 'Edit', edit_child_path(child) %></td>

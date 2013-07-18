@@ -36,6 +36,10 @@
     <%= f.check_box :in_work %>
   </div>
   <div class="field">
+    <%= f.label :occupation %><br>
+    <%= f.text_field :occupation %>
+  </div>
+  <div class="field">
     <%= f.label :parent %><br>
     <%= f.select(:parent_id, Person.all.map { |p| [ "#{p.surname}, #{p.forename}", p.id ] }) %>
   </div>

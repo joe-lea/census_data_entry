@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130717225952) do
+ActiveRecord::Schema.define(version: 20130718002947) do
 
   create_table "census_records", force: true do |t|
     t.integer  "parish_id"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20130717225952) do
     t.integer  "parent_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "occupation"
   end
 
   create_table "people", force: true do |t|
