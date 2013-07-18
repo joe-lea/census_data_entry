@@ -41,7 +41,7 @@
   </div>
   <div class="field">
     <%= f.label :parent %><br>
-    <%= f.select(:parent_id, Person.all.map { |p| [ "#{p.surname}, #{p.forename}", p.id ] }) %>
+    <%= f.select(:parent_id, Person.all.map { |p| [ "#{p.surname}, #{p.forename}", p.id ] }.reverse) %>
   </div>
   <div class="actions">
     <%= f.submit %>
