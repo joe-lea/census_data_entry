@@ -19,11 +19,11 @@
     <%= f.label :forename %><br>
     <%= f.text_field :forename %>
   </div>
-  <div class="field">
+  <div id="position_in_household" class="field">
     <%= f.label :position_in_household %><br>
     <%= f.text_field :position_in_household %>
   </div>
-  <div class="field">
+  <div id="relationship_status" class="field">
     <%= f.label :relationship_status %><br>
     <%= collection_select(:person, :relationship_status_id, RelationshipStatus.all, :id, :description) %>
   </div>
