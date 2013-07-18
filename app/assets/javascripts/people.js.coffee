@@ -11,7 +11,7 @@ $(document).ready( ->
 
   update_relationship_status = ->
     $('#relationship_status').find('select')
-                             .val('3')
+                             .val('2')
 
   position_in_household_box = $('#position_in_household').find('input')
   position_in_household_box.keyup( -> if is_wife() then update_relationship_status() )
